@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.ExtCtrls, Vcl.StdCtrls,
+  Vcl.Imaging.pngimage;
 
 type
   TForm1 = class(TForm)
@@ -18,10 +19,14 @@ type
     N3: TMenuItem;
     N4: TMenuItem;
     N7: TMenuItem;
+    Image1: TImage;
+    Label1: TLabel;
+    Label2: TLabel;
     procedure N6Click(Sender: TObject);
     procedure N8Click(Sender: TObject);
     procedure N9Click(Sender: TObject);
     procedure N7Click(Sender: TObject);
+    procedure N4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,7 +40,13 @@ implementation
 
 {$R *.dfm}
 
-uses AuthBooksTable, AuthorsTable, BooksTable, DBManager, BookWordSearch;
+uses AuthBooksTable, AuthorsTable, BooksTable, DBManager, BookWordSearch,
+  AuthorsBooksSearch;
+
+procedure TForm1.N4Click(Sender: TObject);
+begin
+  Form6.Show;
+end;
 
 procedure TForm1.N6Click(Sender: TObject);
 begin

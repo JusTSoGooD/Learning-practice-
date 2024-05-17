@@ -9,6 +9,9 @@ procedure WriteAuthBookToFile(AuthId: integer; BookName: string);
 procedure DeleteInfoFromDB(p: char; Id: string);
 function GetInfoFromDB(p: char):wArray;
 function FindAuthorsSurname(id: string):string;
+function FindBooksByKey(keyWord: string):wArray;
+function  GetAuthorCodeByBook(bookName: string):string;
+function GetAuthorBooksFromDb(authorSurname: string):warray;
 
 implementation
 
@@ -118,9 +121,76 @@ begin
       AuthInfSubstrings := SplitString(Line, ';');
       result := AuthInfSubstrings[1];
     end;
+  end;
+end;
+
+
+function FindBooksByKey(keyWord: string):wArray;
+var
+  StreamReader: TStreamReader;
+  Line, FilePath, BooksInfo: string;
+  info: wArray;
+  i: integer;
+begin
+  StreamReader := TStreamReader.Create(BooksPath, TEncoding.UTF8);
+  i:=1;
+  keyWord := AnsiLowerCase(keyWord);
+  while not StreamReader.EndOfStream do
+  begin
+    Line := StreamReader.ReadLine;
+    if Pos(keyWord, AnsiLowerCase(Line)) > 0  then
+    begin
+      info[i] := Line;
+      Inc(i);
+    end;
+  end;
+
+  result:=info;
+end;
+
+function  GetAuthorCodeByBook(bookName: string):string;
+var
+  StreamReader: TStreamReader;
+  Line: string;
+  AuthBookInf: TArray<string>;
+begin
+  StreamReader := TStreamReader.Create(AuthBooksPath, TEncoding.UTF8);
+  while not StreamReader.EndOfStream do
+  begin
+    Line := StreamReader.ReadLine;
+    AuthBookInf := SplitString(Line, ';');
+    if Pos(AnsiLowerCase(bookName), AnsiLowerCase(Line)) > 0  then
+    begin
+      AuthBookInf := SplitString(Line, ';');
+      result := AuthBookInf[0];
+      break;
+    end;
+  end;
+end;
+
+function GetAuthorBooksFromDb(authorSurname: string):warray;
+var
+  AuthorsBooksInf, authBooks, surname: warray;
+  authBooksSubstrings: TArray<string>;
+  i, j: integer;
+begin
+  AuthorsBooksInf := GetInfoFromDB('c');
+  i:=1;
+  j:=1;
+  while AuthorsBooksInf[i] <> '' do
+  begin
+    authBooksSubstrings := SplitString(AuthorsBooksInf[i], ';');
+    if AnsiLowerCase(FindAuthorsSurname(authBooksSubstrings[0])) = AnsiLowerCase(authorSurname) then
+    begin
+      authBooks[j] := FindBooksByKey(authBooksSubstrings[1])[1];
+      Inc(j);
+    end;
+
+    Inc(i);
 
   end;
 
+  result:= authBooks;
 end;
 
 end.

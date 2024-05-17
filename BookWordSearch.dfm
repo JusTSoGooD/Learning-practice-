@@ -3,7 +3,7 @@ object Form5: TForm5
   Top = 0
   Caption = #1055#1086#1080#1089#1082' '#1082#1085#1080#1075#1080' '#1087#1086' '#1082#1083#1102#1095#1077#1074#1086#1084#1091' '#1089#1083#1086#1074#1091
   ClientHeight = 303
-  ClientWidth = 652
+  ClientWidth = 603
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,9 +21,9 @@ object Form5: TForm5
   object BooksTable: TStringGrid
     Left = 24
     Top = 24
-    Width = 593
+    Width = 561
     Height = 153
-    ColCount = 3
+    ColCount = 4
     TabOrder = 0
   end
   object KeyWord: TEdit
@@ -40,5 +40,6 @@ object Form5: TForm5
     Height = 50
     Caption = #1055#1086#1080#1089#1082
     TabOrder = 2
+    OnClick = SearchBooksClick
   end
 end

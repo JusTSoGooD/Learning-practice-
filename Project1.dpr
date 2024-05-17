@@ -7,7 +7,8 @@ uses
   BooksTable in 'BooksTable.pas' {Form3},
   AuthBooksTable in 'AuthBooksTable.pas' {Form4},
   DBManager in 'DBManager.pas',
-  BookWordSearch in 'BookWordSearch.pas' {Form5};
+  BookWordSearch in 'BookWordSearch.pas' {Form5},
+  AuthorsBooksSearch in 'AuthorsBooksSearch.pas' {Form6};
 
 {$R *.res}
 
@@ -19,5 +20,6 @@ begin
   Application.CreateForm(TForm3, Form3);
   Application.CreateForm(TForm4, Form4);
   Application.CreateForm(TForm5, Form5);
+  Application.CreateForm(TForm6, Form6);
   Application.Run;
 end.
