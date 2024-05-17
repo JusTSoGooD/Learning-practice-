@@ -1,0 +1,52 @@
+unit BooksTable;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Grids, Vcl.StdCtrls;
+
+type
+  TForm3 = class(TForm)
+    BooksTable: TStringGrid;
+    BookName: TEdit;
+    Language: TEdit;
+    DateOfPubl: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    AddBook: TButton;
+    procedure AddBookClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+
+implementation
+
+{$R *.dfm}
+
+uses AuthBooksTable, AuthorsTable, DBManager, LPmain;
+
+procedure TForm3.AddBookClick(Sender: TObject);
+var bName, blang: string;
+begin
+  if (BookName.Text <> '') and (Language.Text <> '') and (DateOfPubl.Text <> '') then
+  begin
+    bName := BookName.Text;
+    blang :=  Language.Text;
+    WriteBookToFile(bName, blang	, DateOfPubl.Text);
+    ShowMessage('Успешно добавлена книга');
+  end
+  else
+  begin
+    ShowMessage('Проверьте правильность введенных данных');
+  end;
+
+end;
+
+end.

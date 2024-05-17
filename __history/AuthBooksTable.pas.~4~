@@ -1,0 +1,48 @@
+unit AuthBooksTable;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Grids, Vcl.StdCtrls;
+
+type
+  TForm4 = class(TForm)
+    AuthBooksTable: TStringGrid;
+    AuthId: TEdit;
+    BookName: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    AddAuthor: TButton;
+    procedure AddAuthorClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form4: TForm4;
+
+implementation
+
+{$R *.dfm}
+
+uses AuthorsTable, BooksTable, DBManager, LPmain;
+
+procedure TForm4.AddAuthorClick(Sender: TObject);
+var bName: string;
+begin
+  if (AuthId.Text <> '') and (BookName.Text <> '') then
+  begin
+    bName :=  BookName.Text;
+    WriteAuthBookToFile(StrToInt(AuthId.Text), bName);
+    ShowMessage('Успешно добавлен автор с его книгой');
+  end
+  else
+  begin
+    ShowMessage('Проверьте правильность введенных данных');
+  end;
+end;
+
+end.

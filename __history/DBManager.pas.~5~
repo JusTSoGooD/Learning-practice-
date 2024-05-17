@@ -1,0 +1,58 @@
+unit DBManager;
+
+interface
+uses SysUtils, System.Classes;
+procedure WriteBookToFile(BookName: string; BookLang: string; BookPubDate: string);
+procedure WriteAuthToFile(AuthId: integer; AuthSurname: string; AuthCountry: string);
+procedure WriteAuthBookToFile(AuthId: integer; BookName: string);
+
+implementation
+
+uses AuthBooksTable, AuthorsTable, BooksTable, LPmain;
+
+const BooksPath = 'books.txt';
+const AuthPath = 'auth.txt';
+const AuthBooksPath = 'authbooks.txt';
+
+
+procedure WriteBookToFile(BookName: string; BookLang: string; BookPubDate: string);
+var
+  MyFile: TextFile;
+  StreamWriter: TStreamWriter;
+begin
+   AssignFile(MyFile, BooksPath);
+   if not FileExists(BooksPath) then Rewrite(MyFile);
+   StreamWriter := TStreamWriter.Create(BooksPath, False, TEncoding.UTF8);
+   Append(MyFile);
+   StreamWriter.Write(BookName + ';' + BookLang + ';' + BookPubDate);
+   CloseFile(MyFile);
+end;
+
+procedure WriteAuthToFile(AuthId: integer; AuthSurname: string; AuthCountry: string);
+var
+  MyFile: TextFile;
+  StreamWriter: TStreamWriter;
+begin
+   AssignFile(MyFile, AuthPath);
+   if not FileExists(AuthPath) then Rewrite(MyFile);
+   StreamWriter := TStreamWriter.Create(AuthPath, False, TEncoding.UTF8);
+   Append(MyFile);
+   StreamWriter.Write(IntToStr(AuthId) + ';' + AuthSurname + ';' + AuthCountry);
+   CloseFile(MyFile);
+end;
+
+procedure WriteAuthBookToFile(AuthId: integer; BookName: string);
+var
+  MyFile: TextFile;
+  StreamWriter: TStreamWriter;
+begin
+   AssignFile(MyFile, AuthBooksPath);
+   if not FileExists(AuthBooksPath) then Rewrite(MyFile);
+   StreamWriter := TStreamWriter.Create(AuthBooksPath, False, TEncoding.UTF8);
+   Append(MyFile);
+   StreamWriter.Write(IntToStr(AuthId) + ';' + BookName + ';');
+   CloseFile(MyFile);
+end;
+
+
+end.

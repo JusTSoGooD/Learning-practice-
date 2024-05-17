@@ -1,0 +1,52 @@
+unit DBManager;
+
+interface
+uses SysUtils;
+procedure WriteBookToFile(BookName: string; BookLang: string; BookPubDate: string);
+procedure WriteAuthToFile(AuthId: integer; AuthSurname: string; AuthCountry: string);
+procedure WriteAuthBookToFile(AuthId: integer; BookName: string);
+
+implementation
+
+uses AuthBooksTable, AuthorsTable, BooksTable, LPmain;
+
+const BooksPath = 'books.txt';
+const AuthPath = 'auth.txt';
+const AuthBooksPath = 'authbooks.txt';
+
+
+procedure WriteBookToFile(BookName: string; BookLang: string; BookPubDate: string);
+var
+  MyFile: TextFile;
+begin
+   AssignFile(MyFile, BooksPath);
+   if not FileExists(BooksPath) then Rewrite(MyFile);
+   Append(MyFile);
+   Writeln(MyFile, BookName + ';' + BookLang + ';' + BookPubDate);
+   CloseFile(MyFile);
+end;
+
+procedure WriteAuthToFile(AuthId: integer; AuthSurname: string; AuthCountry: string);
+var
+  MyFile: TextFile;
+begin
+   AssignFile(MyFile, AuthPath);
+   if not FileExists(AuthPath) then Rewrite(MyFile);
+   Append(MyFile);
+   Writeln(MyFile, IntToStr(AuthId) + ';' + AuthSurname + ';' + AuthCountry);
+   CloseFile(MyFile);
+end;
+
+procedure WriteAuthBookToFile(AuthId: integer; BookName: string);
+var
+  MyFile: TextFile;
+begin
+   AssignFile(MyFile, AuthBooksPath);
+   if not FileExists(AuthBooksPath) then Rewrite(MyFile);
+   Append(MyFile);
+   Writeln(MyFile, IntToStr(AuthId) + ';' + BookName + ';');
+   CloseFile(MyFile);
+end;
+
+
+end.

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.959,C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\Unit4.dfm=C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\AuthBooksTable.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.180,C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\AuthorsTable.pas=C:\Users\kuchm\Desktop\БГУИР\Учебная практика\AuthorsTable.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.479,C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\AuthorsTable.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.026,C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\kuchm\Desktop\БГУИР\Учебная практика\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.479,C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\AuthorsTable.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.878,C:\Users\kuchm\Desktop\БГУИР\Учебная практика\Project1.dproj=C:\Users\kuchm\Desktop\БГУИР\Учебная практика\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.168,=C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.292,=C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.233,C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\Unit3.pas=C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\BooksTable.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.233,C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\Unit3.dfm=C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\BooksTable.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.345,C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\AuthBooksTable.pas=C:\Users\kuchm\Desktop\БГУИР\Учебная практика\AuthBooksTable.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.959,C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\Unit4.pas=C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\AuthBooksTable.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.929,=C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.522,C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\LPmain.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.797,=C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.156,=C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.180,C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\AuthorsTable.dfm=C:\Users\kuchm\Desktop\БГУИР\Учебная практика\AuthorsTable.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.368,C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\LPmain.pas=C:\Users\kuchm\Desktop\БГУИР\Учебная практика\LPmain.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.345,C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\AuthBooksTable.dfm=C:\Users\kuchm\Desktop\БГУИР\Учебная практика\AuthBooksTable.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.364,=C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.302,C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\BooksTable.dfm=C:\Users\kuchm\Desktop\БГУИР\Учебная практика\BooksTable.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.302,C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\BooksTable.pas=C:\Users\kuchm\Desktop\БГУИР\Учебная практика\BooksTable.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.368,C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\LPmain.dfm=C:\Users\kuchm\Desktop\БГУИР\Учебная практика\LPmain.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.950,C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\DBManager.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.522,C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\LPmain.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.470,C:\Users\kuchm\Documents\Embarcadero\Studio\Projects\DBManager.pas=C:\Users\kuchm\Desktop\БГУИР\Учебная практика\DBManager.pas</Transaction>
+    <Transaction>2024.05.16 23:51:44.832,=C:\Users\kuchm\Desktop\БГУИР\Учебная практика\Unit5.pas</Transaction>
+    <Transaction>2024.05.16 23:52:20.894,C:\Users\kuchm\Desktop\БГУИР\Учебная практика\BookWordSearch.dfm=C:\Users\kuchm\Desktop\БГУИР\Учебная практика\Unit5.dfm</Transaction>
+    <Transaction>2024.05.16 23:52:20.894,C:\Users\kuchm\Desktop\БГУИР\Учебная практика\BookWordSearch.pas=C:\Users\kuchm\Desktop\БГУИР\Учебная практика\Unit5.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="AuthBooksTable.pas"/>
+    <File Path="AuthBooksTable.dfm"/>
+    <File Path="AuthorsTable.pas"/>
+    <File Path="AuthorsTable.dfm"/>
+    <File Path="BooksTable.pas"/>
+    <File Path="BooksTable.dfm"/>
+    <File Path="DBManager.pas"/>
+    <File Path="LPmain.pas"/>
+    <File Path="LPmain.dfm"/>
+    <File Path="BookWordSearch.pas"/>
+    <File Path="BookWordSearch.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

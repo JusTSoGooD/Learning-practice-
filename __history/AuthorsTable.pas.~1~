@@ -1,0 +1,48 @@
+unit AuthorsTable;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Grids, Vcl.StdCtrls;
+
+type
+  TForm2 = class(TForm)
+    AuthorsTable: TStringGrid;
+    AuthSurname: TEdit;
+    AuthCitizenship: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    AddAuthor: TButton;
+    procedure AddAuthorClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+uses AuthBooksTable, BooksTable, DBManager, LPmain;
+
+procedure TForm2.AddAuthorClick(Sender: TObject);
+var Id: integer;
+begin
+  if (AuthSurname.Text <> '') and (AuthCitizenship.Text <> '') then
+  begin
+    randomize;
+    Id := random(10000);
+    WriteAuthToFile(Id, AuthSurname.Text	, AuthCitizenship.Text);
+  end
+  else
+  begin
+    ShowMessage('Проверьте правильность введенных данных');
+  end;
+end;
+
+end.
